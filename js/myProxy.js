@@ -1,4 +1,4 @@
-let config = {
+/* let config = {
     maxPlayers: 4,
     startingLevel: 1,
     difficulty: 'medium'
@@ -16,4 +16,4 @@ let secureConfig = new Proxy(config, handler);
 console.log(secureConfig.maxPlayers);
 console.log(secureConfig.startingLevel);
 console.log(secureConfig.difficulty);
-console.log(secureConfig.invalidProperty);
+console.log(secureConfig.invalidProperty);*/

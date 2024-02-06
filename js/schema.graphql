@@ -1,0 +1,31 @@
+type user {
+    id: ID,
+    name: string!
+    email: string!
+}
+
+type Query {
+    user(id: ID!): User
+}
+
+# Resolvers (pode ser em JavaScript, por exemplo)
+const users = [
+    { id:'1', name: 'John Doe', email: 'john@smith.com' },
+];
+
+const resolvers = {
+    Query: {
+        user: (parent, args, context, info) => {
+            const userID = args.id;
+            return user.find(user => user.id === userID);
+        },
+    },
+};
+
+#Agora, ao fazer uma consulta GraphQL
+query {
+    user(id: '1') {
+        name
+        email
+    }
+}
